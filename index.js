@@ -59,6 +59,9 @@ function onDiscoverDevice(device){
 	if(device.name == "GREENHOUSE")
 	{
 		document.getElementByClassName("connect").disabled = false;
+		document.getElementByClassName("connect").style.backgroundColor = "#FF0000";
+		document.getElementByClassName("connect").innerHTML = "FING CONNECT";
+		
 	}
 }
 
