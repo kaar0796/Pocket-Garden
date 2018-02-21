@@ -57,7 +57,7 @@ function refreshDeviceList(){
 
 function onDiscoverDevice(device){
 	//Make a list in html and show devises
-	if(device.name == "" && device.id=="")
+	if(device.name == "GREENHOUSE")
 	{
 		document.getElementById("connect").disabled = false;
 	}
@@ -65,8 +65,8 @@ function onDiscoverDevice(device){
 
 
 function conn(){
-	
-	var  deviceTouch= "GREENHOUSE";
+	var  deviceTouch= event.srcElement.innerHTML;
+	//var  deviceTouch= "OnePlus 5T,94:65:2d:40:ab:57";
 	document.getElementById("debugDiv").innerHTML =""; // empty debugDiv
 	var deviceTouchArr = deviceTouch.split(",");
 	ConnDeviceId = deviceTouchArr[1];
