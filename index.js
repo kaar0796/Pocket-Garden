@@ -56,12 +56,13 @@ function refreshDeviceList(){
 
 function onDiscoverDevice(device){
 	//Make a list in html and show devises
+	
+	var listItem = document.createElement('li'),
+	html = device.name+ "," + device.id;
+	listItem.innerHTML = html;
+	document.getElementById("bleDeviceList").appendChild(listItem);
 	if(device.name == "GREENHOUSE")
 	{
-		var listItem = document.createElement('li'),
-		html = device.name+ "," + device.id;
-		listItem.innerHTML = html;
-		document.getElementById("bleDeviceList").appendChild(listItem);
 		document.getElementByClassName("connect").disabled = false;
 		document.getElementByClassName("connect").style.backgroundColor = "#FF0000";
 		document.getElementByClassName("connect").innerHTML = "FING CONNECT";
