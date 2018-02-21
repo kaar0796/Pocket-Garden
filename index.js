@@ -44,7 +44,7 @@ function onDeviceReady(){
 	 
 function refreshDeviceList(){
 	//deviceList =[];
-	document.getElementById("bleDeviceList").innerHTML = ''; // empties the list
+	//document.getElementById("bleDeviceList").innerHTML = ''; // empties the list
 	if (cordova.platformId === 'android') { // Android filtering is broken
 		ble.scan([], 5, onDiscoverDevice, onError);
 	} else {
@@ -67,28 +67,28 @@ function conn(){
 	//var  deviceTouch= event.srcElement.innerHTML;
 	//var  deviceTouch= "OnePlus 5T,94:65:2d:40:ab:57"
 	var  deviceTouch= "GREENHOUSE,D9:E3:F8:B6:B1:86"
-	document.getElementById("debugDiv").innerHTML =""; // empty debugDiv
+	//document.getElementById("debugDiv").innerHTML =""; // empty debugDiv
 	var deviceTouchArr = deviceTouch.split(",");
 	ConnDeviceId = deviceTouchArr[1];
 	//for debug:
-	document.getElementById("debugDiv").innerHTML += "<br>"+deviceTouchArr[0]+"<br>"+deviceTouchArr[1];
+	//document.getElementById("debugDiv").innerHTML += "<br>"+deviceTouchArr[0]+"<br>"+deviceTouchArr[1];
 	ble.connect(ConnDeviceId, onConnect, onConnError);
  }
  
 function onConnect(){
-	document.getElementById("statusDiv").innerHTML = " Status: Connected";
-	document.getElementById("bleId").innerHTML = ConnDeviceId;
+	//document.getElementById("statusDiv").innerHTML = " Status: Connected";
+	//document.getElementById("bleId").innerHTML = ConnDeviceId;
 	ble.startNotification(ConnDeviceId, blue.serviceUUID, blue.rxCharacteristic, onData, onError);
 	 // ble.startNotification(deviceId, bluefruit.serviceUUID, bluefruit.rxCharacteristic, app.onData, app.onError);
 }
 
 function onConnError(){
 	alert("Problem connecting");
-	document.getElementById("statusDiv").innerHTML = " Status: Disonnected";
+	//document.getElementById("statusDiv").innerHTML = " Status: Disonnected";
 }
 
  function onData(data){ // data received from Arduino
-	document.getElementById("receiveDiv").innerHTML =  "Received: " + bytesToString(data) + "<br/>";
+	//document.getElementById("receiveDiv").innerHTML =  "Received: " + bytesToString(data) + "<br/>";
 }
 
 function data(txt){
@@ -101,7 +101,7 @@ function sendData() { // send data to Arduino
 }
 	
 function onSend(){
-	document.getElementById("sendDiv").innerHTML = "Sent: " + messageInput.value + "<br/>";
+	//document.getElementById("sendDiv").innerHTML = "Sent: " + messageInput.value + "<br/>";
 }
 
 function disconnect() {
@@ -109,7 +109,7 @@ function disconnect() {
 }
 
 function onDisconnect(){
-	document.getElementById("statusDiv").innerHTML = "Status: Disconnected";
+	//document.getElementById("statusDiv").innerHTML = "Status: Disconnected";
 }
 function onError(reason)  {
 	alert("ERROR: " + reason); // real apps should use notification.alert
