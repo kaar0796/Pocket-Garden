@@ -66,7 +66,7 @@ function onDiscoverDevice(device){
 
 function conn(){
 	
-	var  deviceTouch= "NAME,MAC";
+	var  deviceTouch= "94:65:2d:40:ab:57";
 	document.getElementById("debugDiv").innerHTML =""; // empty debugDiv
 	var deviceTouchArr = deviceTouch.split(",");
 	ConnDeviceId = deviceTouchArr[1];
