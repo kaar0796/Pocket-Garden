@@ -58,15 +58,15 @@ function onDiscoverDevice(device){
 	//Make a list in html and show devises
 	if(device.name == "GREENHOUSE")
 	{
-		document.getElementById("connect").disabled = false;
+		document.getElementByClassName("connect").disabled = false;
 	}
 }
 
 
 function conn(){
 	//var  deviceTouch= event.srcElement.innerHTML;
-	var  deviceTouch= "OnePlus 5T,94:65:2d:40:ab:57"
-	//var  deviceTouch= "GREENHOUSE,D9:E3:F8:B6:B1:86"
+	//var  deviceTouch= "OnePlus 5T,94:65:2d:40:ab:57"
+	var  deviceTouch= "GREENHOUSE,D9:E3:F8:B6:B1:86"
 	document.getElementById("debugDiv").innerHTML =""; // empty debugDiv
 	var deviceTouchArr = deviceTouch.split(",");
 	ConnDeviceId = deviceTouchArr[1];
