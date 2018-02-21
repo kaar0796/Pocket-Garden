@@ -21,7 +21,15 @@
 		<button class="btn connect" onclick="conn()" disabled>Connect</button>
 		
 		<button class="btn plants" onclick="updateS()">My Garden</button>
+		
 	</div>
+	
+	<ul id="bleDeviceList"> </ul>  
+		<button id="refreshButton" onClick = "refreshDeviceList()">Refresh</button>
+		<br>
+		<div id="statusDiv">Status: Disconnected</div>
+		<div id="bleId">DeviceId:</div>
+		<div id="debugDiv"></div>
 	
 	
 	<div id="notarea">
