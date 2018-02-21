@@ -63,7 +63,6 @@ function onDiscoverDevice(device){
 	document.getElementById("bleDeviceList").appendChild(listItem);
 	if(device.name == "GREENHOUSE")
 	{
-		document.getElementById("connect").disabled = false;
 		document.getElementById("connect").style.backgroundColor = "#FF0000";
 		document.getElementById("connect").innerHTML = "FING CONNECT";
 		
