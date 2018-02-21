@@ -63,9 +63,9 @@ function onDiscoverDevice(device){
 	document.getElementById("bleDeviceList").appendChild(listItem);
 	if(device.name == "GREENHOUSE")
 	{
-		document.getElementByClassName("connect").disabled = false;
-		document.getElementByClassName("connect").style.backgroundColor = "#FF0000";
-		document.getElementByClassName("connect").innerHTML = "FING CONNECT";
+		document.getElementById("connect").disabled = false;
+		document.getElementById("connect").style.backgroundColor = "#FF0000";
+		document.getElementById("connect").innerHTML = "FING CONNECT";
 		
 	}
 }
