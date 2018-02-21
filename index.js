@@ -65,8 +65,9 @@ function onDiscoverDevice(device){
 
 
 function conn(){
-	var  deviceTouch= event.srcElement.innerHTML;
-	//var  deviceTouch= "OnePlus 5T,94:65:2d:40:ab:57";
+	//var  deviceTouch= event.srcElement.innerHTML;
+	//var  deviceTouch= "OnePlus 5T,94:65:2d:40:ab:57" event.srcElement.innerHTML;
+	var  deviceTouch= "GREENHOUSE,D9:E3:F8:B6:B1:86" event.srcElement.innerHTML;
 	document.getElementById("debugDiv").innerHTML =""; // empty debugDiv
 	var deviceTouchArr = deviceTouch.split(",");
 	ConnDeviceId = deviceTouchArr[1];
